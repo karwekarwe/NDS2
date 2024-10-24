@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100%;
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+  background-color: rgb(243, 217, 182);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.intro {
+  height: 100vh; 
+  background-color: rgb(189, 150, 107); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em; 
+  text-align: center;
+}
+
+/* po intro ir knygu inner */
+.main-content .book-content{
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+}
+
+/*header*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
+  height: 80px; 
+}
+
+/* Logo */
+.header .logo img {
+  max-width: 100%;
+  max-height: 200px; 
+  vertical-align: middle; 
+}
+
+/* Puslapio pavadinimas h1 */
+h1 {
+  text-align: center;
+}
+
+
+/*nuotrauku galerija*/
+
+.slideshow-container img {
+  vertical-align: middle;
+  width: 100%;
+  height: auto;
+  max-width: 200px; 
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: opacity 0.5s ease;
+
+}
+
+.slideshow-container img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+/* nuotrauku galerijos pozicija */
+.slideshow-container, .tekstas {
+  position: relative;
+  margin: 0 auto; 
+  max-width: 800px; 
+  text-align: center;
+}
+
+.slideshow-container .cursor {
+  cursor: pointer;
+}
+
+/*mygtukai i kaire ir desine */
+.slideshow-container .prev,
+.slideshow-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.slideshow-container .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.slideshow-container .prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: rgb(189, 150, 107);
+  text-align: center;
+   padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer .contacts,
+.footer .soc {
+  flex: 1 1 200px; 
+  margin: 20px;
+}
+
+
+.footer h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+}
+
+.footer .contacts p,
+.footer .contacts a {
+  color: white;
+  margin: 5px 0;
+  text-decoration: none;
+}
+
+.footer .contacts a:hover {
+  color: rgb(84, 140, 100);
+}
+
+
+.footer .soc a img {
+  width: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.footer .soc a img:hover {
+  transform: scale(1.05); 
+}
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.3); 
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9em;
+  color: white;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+  .header .logo img {
+    height: 180px; 
+  }
+
+  .intro {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .header .logo img {
+    height: 150px; 
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    font-size: 2em;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo img {
+    height: 120px;
+  }
+
+  .footer h3 {
+    font-size: 1.1em;
+  }
+}
+
+@media (orientation: landscape) {
+  .intro {
+    font-size: 2.5em; 
+  }
+
+}
+
+
+
+.book-content {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: rgb(189, 150, 107);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-content img {
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+  max-width: 200px; 
+  border: 3px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}

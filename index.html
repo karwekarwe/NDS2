@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="lt">
+  <head>
+    <title>Knygų lentyna</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Knygų lentyna – plačiausias įvairių knygų pasirinkimas."
+    />
+    <meta name="keywords" content="knygos, elektroninės knygos, literatūra" />
+    <meta name="author" content="Dominykas Mykolaitis" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Playfair Display" rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+
+  <body>
+    <div class="intro">
+      <h1>Knygų lentyna</h1>
+    </div>
+
+    <div class="main-content">
+      <div class="header">
+            <a href="index.html" class="logo">
+            <img src="nuotraukos/Logo.png" alt="Logo"/>
+            </a>
+      </div>
+
+    <div class="tekstas">
+      <h3> Knygų lentyna – atraskite plačiausią knygų pasirinkimą! </h3>
+      <p> Knygų lentyna - tai virtuali erdvė, skirta knygų mylėtojams, 
+        ieškantiems kokybiškos ir įvairiapusiškos literatūros. 
+        Čia rasite įvairaus žanro literatūrą, 
+        pradedant nuo grožinės, baigiant moksliniais veikalais. 
+        </p>
+    </div>
+
+
+      <h2 style="text-align:center">Knygų asortimentas:</h2>
+
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <a href="balta-drobule.html">
+                    <img src="nuotraukos/balta-drobule.png" alt="Balta drobulė" width="100"/>
+                </a>
+            </div>
+
+            <div class="mySlides">
+                <a href="stepiu-vilkas.html">
+                    <img src="nuotraukos/stepiu-vilkas.png" alt="Stepiu vilkas" width="100"/>
+                </a>
+            </div>
+
+            <div class="mySlides">
+                <a href="stambulas.html">
+                    <img src="nuotraukos/stambulas.png" alt="Stambulas" width="100" />
+                </a>
+            </div>
+                
+            <div class="mySlides">
+                <a href="hobitas.html">
+                    <img src="nuotraukos/hobitas.png" alt="Hobitas" width="100" />
+                </a>
+            </div>
+
+            <div class="mySlides">
+                <a href="musiu-valdovas.html">
+                    <img src="nuotraukos/musiu-valdovas.png" alt="Musiu valdovas" width="100" />
+                </a>
+            </div>
+                
+            <div class="mySlides">
+                <a href="iliada.html">
+                    <img src="nuotraukos/iliada.png" alt="Iliada" width="100" />
+                </a>
+            </div>
+                
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>        
+
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer contacts">
+            <h3>Susisiekime</h3>
+            <p>Knygų g. 2, Vilnius</p>
+            <p>Tel.: +370 600 12345</p>
+            <a href="mailto:knygulentyna@gmail.com">knygulentyna@gmail.com</a>
+          </div>
+          <div class="footer soc medija">
+            <h3>Pasekite mus</h3>
+            <a href="#"
+              ><img src="nuotraukos/facebook-icon.png" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="nuotraukos/instagram-icon.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 Knygų lentyna. Visos teisės saugomos.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+
+  </body>
+</html>
